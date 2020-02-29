@@ -1,0 +1,6 @@
+C:\Users\Eziz\source\repos\Console-K101Cars\Console-K101Cars\bin\Debug\Console-K101Cars.exe.config
+C:\Users\Eziz\source\repos\Console-K101Cars\Console-K101Cars\bin\Debug\Console-K101Cars.exe
+C:\Users\Eziz\source\repos\Console-K101Cars\Console-K101Cars\bin\Debug\Console-K101Cars.pdb
+C:\Users\Eziz\source\repos\Console-K101Cars\Console-K101Cars\obj\Debug\Console-K101Cars.csprojAssemblyReference.cache
+C:\Users\Eziz\source\repos\Console-K101Cars\Console-K101Cars\obj\Debug\Console-K101Cars.exe
+C:\Users\Eziz\source\repos\Console-K101Cars\Console-K101Cars\obj\Debug\Console-K101Cars.pdb
