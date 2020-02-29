@@ -40,6 +40,8 @@ namespace Console_K101Cars
                     {
                         CurrentFuel-=(neededKm / 100) * FuelKm;
                         Console.WriteLine($"Siz {neededKm}km qeder yol getdiniz.{CurrentFuel}l benziniz qaldi;");
+                        globalKm += neededKm;
+                        LocalKM += neededKm;
                     }
                     else
                     {
@@ -51,9 +53,44 @@ namespace Console_K101Cars
         public void TopUp()
         {
             Console.WriteLine("nece l benzin yuklemek isteyirsiniz?");
-            string user = Console.ReadLine();
+            double neededPower = 0;
+            string inp= Console.ReadLine();
+
+            while (neededPower==0)
+            {
+                if(IsEmpty(inp))
+
+                {
+                    neededPower = Convert.ToDouble(inp);
+                    if (IsEmpty(inp))
+                    {
+                        neededPower = Convert.ToDouble(inp);
+                        if (CurrentFuel + neededPower <= FuelPower)
+                        {
+                            CurrentFuel += neededPower;
+                            Console.WriteLine($"Ugurla benzin dolduruldu.{CurrentFuel}lr benzin var.");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Siz maksimum benzin tutumunu aşdınız");
+                        }
+                    }
+                }
+            }
+        }
+        public void Stop()
+        {
+            LocalKM = 0;
+            Console.WriteLine("------------------------")
+            Console.WriteLine($"Local km sifirlandi. Global km :{globalKm}km -dir");
+            Console.WriteLine("------------------------");
 
         }
+        public void LcKm()
+        {
+            Console.WriteLine($"Global km: {globalKm}. Local km: {LocalKM }");
+        }
+
         bool IsEmpty(string soz)
         {
             try

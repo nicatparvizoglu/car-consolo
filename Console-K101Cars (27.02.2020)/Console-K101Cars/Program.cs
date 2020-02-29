@@ -20,8 +20,8 @@ namespace Console_K101Cars
                 Console.WriteLine("1.Go");
                 Console.WriteLine("2.Top Up");
                 Console.WriteLine("3.Stop");
-                Console.WriteLine("4.Exit");
-                Console.Write(">>>>>>>>>>");
+                Console.WriteLine("4.Local Km and Global km");
+                Console.Write("5.Exit");
                 input = Console.ReadLine();
                 
                 if (IsEmpty(input))
@@ -33,20 +33,21 @@ namespace Console_K101Cars
                             break;
 
                         case "2":
+                            Console.Clear();
                             car.TopUp();
                             break;
                         case "3":
-                            Console.WriteLine("Masin gedr");
+                            car.Stop();
                             break;
                         case "4":
-                            Console.WriteLine("Xidmetlerimizden istifade etdiyiniz üçün teşekkür edirik!");
+                            car.LcKm();
                             break;
                         default:
                             Console.WriteLine("Please write only top numeric number!");
                             break;
                     }
                 }
-            } while (input!="4");
+            } while (input!="5");
 
 
 
